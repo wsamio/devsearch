@@ -32,3 +32,5 @@ ctrl+c to turn off server
 8. create an app
 
 python manage.py startapp projects
+
+Set-ExecutionPolicy -Scope CurrentUser Unrestricted
