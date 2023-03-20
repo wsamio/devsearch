@@ -5,4 +5,4 @@ def projects(request):
     return  render(request, 'projects.html')
 
 def project1(request, pk):
-    return  request(request, 'single-project.html')
+    return  render(request, 'single-project.html')
