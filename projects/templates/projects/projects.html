@@ -18,14 +18,34 @@
 
 <h1>Projects</h1>
 
+<table border='1' style='border-collapse:collapse'>
+    <tr>
+      <th> ID </th>
+      <th> Title </th>
+      <th> Description </th>
+    </tr>
+    
+    {% for project in projects %}
+
+    <tr>
+      <td> {{project.id}} </td>
+      <td> {{project.title}} </td>
+      <td> {{project.description}} </td>
+    </tr>
+
+    {% endfor %}
+  
+</table> 
+
 <ul>
 
     {% for project in projects %}
-        <li>Name : {{project.title}}</li>
 
+        <li> Title : {{project.title}} --- {{project.description}}</li>
+    
     {% endfor %}
 
 </ul>
 
 
-{% endblock content%}
+{% endblock content %}
