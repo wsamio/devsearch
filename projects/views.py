@@ -3,7 +3,9 @@ from django.http import HttpResponse
 
 def projects(request):
     page = 'projects'
-    return  render(request, 'projects/projects.html', {'page': page})
+    number = 11
+    context = {'page' : page, 'number': number}
+    return  render(request, 'projects/projects.html', context)
 
 def project(request, pk):
     return  render(request, 'projects/single-project.html')
