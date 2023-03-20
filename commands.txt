@@ -43,3 +43,12 @@ python manage.py migrate
 10. create a user
 
 python manage.py createsuperuser
+
+11. Make migration
+
+python manage.py makemigrations
+
+12. execute migration
+
+python manage.py migrate
+
