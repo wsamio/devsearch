@@ -34,3 +34,12 @@ ctrl+c to turn off server
 python manage.py startapp projects
 
 Set-ExecutionPolicy -Scope CurrentUser Unrestricted
+
+
+9. to apply migration
+
+python manage.py migrate
+
+10. create a user
+
+python manage.py createsuperuser
