@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 def projects(request):
     page = 'projects'
-    number = 9
+    number = 10
     context = {'page' : page, 'number': number}
     return  render(request, 'projects/projects.html', context)
 
