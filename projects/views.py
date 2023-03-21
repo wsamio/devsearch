@@ -14,4 +14,4 @@ def project(request, pk):
 
 def createProject(request):
     context = {}
-    return render(request, 'project/project_form.html', {'context' : context})
+    return render(request, 'projects/project_form.html', context)
