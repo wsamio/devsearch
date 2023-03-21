@@ -52,3 +52,7 @@ python manage.py makemigrations
 
 python manage.py migrate
 
+13. to interact with the database
+
+python manage.py shell
+
