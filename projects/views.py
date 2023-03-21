@@ -13,6 +13,12 @@ project_list = [
         'description' : 'This was a project where I built out my portfolio'
 
     },
+    {
+        'id' : '3',
+        'title' : "Yoga",
+        'description' : 'This was a project where I built out my yoga pants lol'
+
+    },
 ]
 
 def projects(request):
