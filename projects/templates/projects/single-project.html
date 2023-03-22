@@ -3,45 +3,17 @@
 
 {% block content %}
 
-{% for tag in project.tags.all %}
-    <span style="border: 1px solid
-    gray;">{{tag}}</span>
-{% endfor %}
-
-
 <main class="singleProject my-md">
     <div class="container">
       <div class="layout">
         <div class="column column--1of3">
           <h3 class="singleProject__subtitle">Tools & Stacks</h3>
           <div class="singleProject__toolStack">
+            {% for tag in project.tags.all %}
             <span class="tag tag--pill tag--sub tag--lg">
-              <small>Figma</small>
+              <small>{{ tag }}</small>
             </span>
-            <span class="tag tag--pill tag--sub tag--lg">
-              <small>React Js</small>
-            </span>
-            <span class="tag tag--pill tag--sub tag--lg">
-              <small>REST API</small>
-            </span>
-            <span class="tag tag--pill tag--sub tag--lg">
-              <small>GraphQL</small>
-            </span>
-            <span class="tag tag--pill tag--sub tag--lg">
-              <small>TypeScript</small>
-            </span>
-            <span class="tag tag--pill tag--sub tag--lg">
-              <small>Webpack</small>
-            </span>
-            <span class="tag tag--pill tag--sub tag--lg">
-              <small>NextJS</small>
-            </span>
-            <span class="tag tag--pill tag--sub tag--lg">
-              <small>Postgres</small>
-            </span>
-            <span class="tag tag--pill tag--sub tag--lg">
-              <small>MongoDB</small>
-            </span>
+            {% endfor %}
           </div>
           <a class="singleProject__liveLink" href="#" target="_blank"><i class="im im-external-link"></i>Source Code
           </a>
