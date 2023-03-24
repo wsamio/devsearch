@@ -9,10 +9,10 @@
         <div class="column column--1of3">
           <div class="card text-center">
             <div class="card__body dev">
-              <img class="avatar avatar--xl" src="https://avatars.githubusercontent.com/u/33843378" />
-              <h2 class="dev__name">Dennis Ivanov</h2>
-              <p class="dev__title">Expirance FullStack Developer, Youtuber and Instructor</p>
-              <p class="dev__location">Based in Florida, USA</p>
+              <img class="avatar avatar--xl" src="{{ profile.profile_image.url }}" />
+              <h2 class="dev__name">{{ profile.name }}</h2>
+              <p class="dev__title">{{ profile.short_intro }}</p>
+              <p class="dev__location">Based in {{ profile.location }}</p>
               <ul class="dev__social">
                 <li>
                   <a title="Github" href="#" target="_blank"><i class="im im-github"></i></a>
