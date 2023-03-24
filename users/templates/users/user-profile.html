@@ -62,33 +62,14 @@
 
               <h3 class="devInfo__subtitle">Other Skills</h3>
               <div class="devInfo__otherSkills">
+            
+                {% for skill in otherSkills %}
                 <span class="tag tag--pill tag--sub tag--lg">
-                  <small>Figma</small>
+                  <small>{{ skill.name }}</small>
                 </span>
-                <span class="tag tag--pill tag--sub tag--lg">
-                  <small>Vuejs</small>
-                </span>
-                <span class="tag tag--pill tag--sub tag--lg">
-                  <small>REST API</small>
-                </span>
-                <span class="tag tag--pill tag--sub tag--lg">
-                  <small>GraphQL</small>
-                </span>
-                <span class="tag tag--pill tag--sub tag--lg">
-                  <small>TypeScript</small>
-                </span>
-                <span class="tag tag--pill tag--sub tag--lg">
-                  <small>Webpack</small>
-                </span>
-                <span class="tag tag--pill tag--sub tag--lg">
-                  <small>NextJS</small>
-                </span>
-                <span class="tag tag--pill tag--sub tag--lg">
-                  <small>Postgres</small>
-                </span>
-                <span class="tag tag--pill tag--sub tag--lg">
-                  <small>MongoDB</small>
-                </span>
+                {% endfor %}
+                
+            </span>
               </div>
             </div>
           </div>
