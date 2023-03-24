@@ -50,30 +50,15 @@
           <div class="devInfo">
             <h3 class="devInfo__title">Skills</h3>
             <div class="devInfo__skills">
+              
+            {% for skill in topSkills %}
               <div class="devSkill">
-                <h4 class="devSkill__title">JavaScript</h4>
+                <h4 class="devSkill__title">{{ skill.name }}</h4>
                 <p class="devSkill__info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae neque voluptatum ut? Quaerat, ea
-                  cumque! Dolorum provident esse molestias commodi odit sapiente quod quasi corrupti obcaecati? Nobis
-                  ex temporibus quaerat!
+                    {{ skill.description }}
                 </p>
               </div>
-              <div class="devSkill">
-                <h4 class="devSkill__title">React</h4>
-                <p class="devSkill__info">
-                  Smet consectetur adipisicing elit. Omnis, nihil? Accusamus aspernatur aut debitis vitae quaerat
-                  nihil fugiat, doloremque nesciunt alias pariatur maxime unde, nam saepe laborum at odit labore.
-                </p>
-              </div>
-              <div class="devSkill">
-                <h4 class="devSkill__title">Express(Nodejs)</h4>
-                <p class="devSkill__info">
-                  Auae error deleniti aperiam enim nisi nesciunt, ratione eveniet eos fuga ad recusandae mollitia!
-                  Facere earum, distinctio nihil recusandae ipsum nesciunt. Possimus, ex. Officia maxime nihil
-                  inventore cum tenetur! Veritatis sapiente libero ducimus nesciunt itaque, placeat inventore sint
-                  blanditiis?
-                </p>
-              </div>
+            {% endfor %}
 
               <h3 class="devInfo__subtitle">Other Skills</h3>
               <div class="devInfo__otherSkills">
