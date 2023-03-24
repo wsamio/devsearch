@@ -28,14 +28,15 @@
     <section class="devlist">
       <div class="container">
         <div class="grid grid--three">
+        {% for profile in profiles %}
           <div class="column card">
             <div class="dev">
-              <a href="/profile.html" class="card__body">
+              <a href="" class="card__body">
                 <div class="dev__profile">
-                  <img class="avatar avatar--md" src="https://avatars.githubusercontent.com/u/22437186" alt="image" />
+                  <img class="avatar avatar--md" src="{{ profile.profile_image.url }}" alt="image" />
                   <div class="dev__meta">
-                    <h3>Shahriar P. Shuvo</h3>
-                    <h5>FullStack Web Designer & Developer</h5>
+                    <h3>{{ profile.name }}</h3>
+                    <h5>{{ profile.short_intro }}</h5>
                   </div>
                 </div>
                 <p class="dev__info">
@@ -66,7 +67,7 @@
               </a>
             </div>
           </div>
-          
+        {% endfor %}
         </div>
       </div>
     </section>
