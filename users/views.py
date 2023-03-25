@@ -4,6 +4,9 @@ from .models import Profile
 # Create your views here.
 
 def loginPage(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
     return render(request, 'users/login_register.html')
 
 def profiles(request):
