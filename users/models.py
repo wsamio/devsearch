@@ -24,7 +24,7 @@ class Profile(models.Model):
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
 
     def __str__(self):
-        return str(self.user.username)
+        return str(self.username)
 
 
 class Skill(models.Model):
@@ -40,5 +40,7 @@ class Skill(models.Model):
 
 def profileUpdated(sender, instance, created, **kwargs):
     print('Profile Saved!')
+    print('Instance : ', instance)
+    print('Created : ', created)
 
 post_save.connect(profileUpdated, sender=Profile)
