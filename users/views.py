@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 from .models import Profile
 
 # Create your views here.
 
-def loginPage(request):
+def loginUser(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -23,6 +23,10 @@ def loginPage(request):
         else:
             print('Username or password is incorrect')
     return render(request, 'users/login_register.html')
+
+def logoutUser(request):
+    logout(request)
+    return redirect('login')
 
 def profiles(request):
     profiles = Profile.objects.all()
