@@ -37,6 +37,7 @@ def logoutUser(request):
     messages.info(request, 'User was logged out!')
     return redirect('login')
 
+
 def registerUser(request):
     page = 'register'
     form = CustomUserCreationForm()
@@ -50,7 +51,7 @@ def registerUser(request):
 
             messages.success(request, 'User account was created!')
             login(request, user)
-            return redirect('profiles')
+            return redirect('edit-account')
 
         else:
             messages.error(request, 'An error has occured during registration!')
