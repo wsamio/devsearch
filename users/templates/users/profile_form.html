@@ -5,6 +5,7 @@
 
 <form method="POST" action="{% url 'edit-account' %}">
     {% csrf_token %}
+    {{form.as_p}}
     <input type="submit" value="Submit">
 </form>
 
