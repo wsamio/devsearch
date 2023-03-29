@@ -77,8 +77,7 @@ def userProfile(request, pk):
 def userAccount(request):
     profile = request.user.profile
 
-    topSkills = profile.skill.set.exclude(description__exact="")
-    otherSkills = profile.skill_set.filter(description="")
-
-    context = {'profile' : profile, 'topSkills' : topSkills, 'otherSkills' : otherSkills}
+    skills = profile.skill_set.all()
+    
+    context = {'profile' : profile, 'skills' : skills}
     return render(request, 'users/account.html', context)
