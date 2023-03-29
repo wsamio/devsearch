@@ -76,5 +76,9 @@ def userProfile(request, pk):
 @login_required(login_url='login')
 def userAccount(request):
     profile = request.user.profile
-    context = {'profile' : profile}
+
+    topSkills = profile.skill.set.exclude(description__exact="")
+    otherSkills = profile.skill_set.filter(description="")
+
+    context = {'profile' : profile, 'topSkills' : topSkills, 'otherSkills' : otherSkills}
     return render(request, 'users/account.html', context)
