@@ -145,3 +145,4 @@ def updateSkill(request, pk):
         return redirect('account')
     context = {'object' : skill}
     return render(request, 'delete_template.html',  context)
+    
