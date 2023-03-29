@@ -108,6 +108,9 @@ def createSkill(request):
         if form.is_valid():
             skill = form.save(commit=False)
             skill.owner = profile
+            skill.save()
+
+            return redirect('account')
 
     context = {'form' : form}
     return render(request, 'users/skill_form.html', context)
