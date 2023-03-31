@@ -22,7 +22,10 @@ def projects(request):
     except EmptyPage:
         page = paginator.num_pages
         projects = paginator.page(page)
-    context = {'projects' : projects, 'search_query' : search_query, 'paginator' : paginator}
+
+    custom_range = range(1, 1000)
+
+    context = {'projects' : projects, 'search_query' : search_query, 'paginator' : paginator, 'custom_range' : custom_range}
     return render(request, 'projects/projects.html', context)
 
 def project(request, pk):
