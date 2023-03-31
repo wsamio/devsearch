@@ -68,7 +68,7 @@ def profiles(request):
     
 
     profiles = Profile.objects.filter(name__icontains=search_query)
-    context = {'profiles' : profiles}
+    context = {'profiles' : profiles, 'search_query' : search_query}
     return render(request, 'users/profiles.html', context)
 
 def userProfile(request, pk):
