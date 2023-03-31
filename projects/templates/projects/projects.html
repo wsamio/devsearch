@@ -57,6 +57,7 @@
     </div>
   </section>
 
+  {% if projects.has_other_pages %}
   <div class="pagination">
     <ul class="container">
 
@@ -79,10 +80,10 @@
       {% if projects.has_next  %}
         <li><a href="?page={{projects.next_page_number}}" class="btn page-link"> Next &#10095; </a></li>
       {% endif %}
-      
+
     </ul>
   </div>
-
+  {% endif %}
 
 </main>
 
