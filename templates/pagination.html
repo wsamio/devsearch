@@ -25,3 +25,18 @@
     </ul>
   </div>
   {% endif %}
+
+  <script type="text/javascript">
+    //Get search form and page links
+    let searchForm = document.getElementById('searchForm')
+    let pageLinks = document.getElementsByClassName('page-link')
+
+    if(searchForm){
+      for(let i =0; i < pageLinks.length; let++) {
+        pageLinks[i].addEventListener('click', (e)=> {
+          e.preventDefault()
+          console.log('Button click')
+        })
+      }
+    }
+  </script>
