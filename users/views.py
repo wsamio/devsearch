@@ -64,7 +64,7 @@ def profiles(request):
     
     profiles, search_query = searchProfiles(request)
     
-    result = 3
+    result = 6
     custom_range, profiles = paginateProfiles(request, profiles, result)
     
     context = {'profiles' : profiles, 'search_query' : search_query, 'custom_range' : custom_range}
