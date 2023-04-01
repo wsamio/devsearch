@@ -9,7 +9,7 @@ def projects(request):
     
     projects, search_query = searchProjects(request)
     
-    result = 6
+    result = 3
     custom_range, projects = paginateProjects(request, projects, result)
     
 
