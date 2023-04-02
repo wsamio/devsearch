@@ -30,6 +30,7 @@ def project(request, pk):
 
     #     #update project votecount
         messages.success(request, 'Your review was successfully submitted!')
+        return redirect('project', pk=projectObj.id)
     return render(request, 'projects/single-project.html', {'project' : projectObj, 'form' : form})
 
 @login_required(login_url="login")
