@@ -59,7 +59,7 @@
                 <div class="comment__details">
                   <a href="{% url 'user-profile' review.owner.id %}" class="comment__author">{{ review.owner.name }}</a>
                   <p class="comment__info">
-                    {{ review.body }}
+                    {{ review.body|linebreaksbr }}
                   </p>
                 </div>
               </div>
