@@ -21,7 +21,7 @@ class Project(models.Model):
         return self.title
 
     class Meta:
-        ordering = ['created']
+        ordering = ['-vote_ratio', '-vote_total', 'title']
 
     @property
     def getVoteCount(self):
