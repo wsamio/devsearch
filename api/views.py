@@ -1,4 +1,4 @@
-from django.http import JasonResponse
+from django.http import JsonResponse
 
 def getRoutes(request):
 
@@ -11,4 +11,4 @@ def getRoutes(request):
         {'POST':'/api/users/token/refresh'},
     ]
 
-    return JasonResponse(routes)
+    return JsonResponse(routes, safe=False)
