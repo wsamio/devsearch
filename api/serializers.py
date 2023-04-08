@@ -15,6 +15,8 @@ class TagSerializer(serializers.ModelSerializer):
 
 
 class ProjectSerializer(serializers.ModelSerializer):
+    owner = ProfileSerializer(many=False)
+    tags = TagSerializer(many=True)
     class Meta:
         model = Project
         fields = '__all__'
