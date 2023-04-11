@@ -22,9 +22,12 @@ def getRoutes(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def getProjects(request):
+    print('USER:', request.user)
     projects = Project.objects.all()
     serializer = ProjectSerializer(projects, many=True) 
     return Response(serializer.data)
+
+
 
 @api_view(['GET'])
 def getProject(request, pk):
